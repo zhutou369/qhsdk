@@ -17,5 +17,6 @@ collections:
     fields:
       - {label: "文章标题", name: "title", widget: "string"}
       - {label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
+      - {label: "标签", name: "tags", widget: "hidden", default: "blog"} # 添加这一行
       - {label: "正文内容", name: "body", widget: "markdown"}
       - {label: "布局", name: "layout", widget: "hidden", default: "layout.njk"}
