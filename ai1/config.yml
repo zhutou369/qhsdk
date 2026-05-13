@@ -5,14 +5,20 @@ backend:
   base_url: https://ws-auth-gate.zhutou757.workers.dev
   auth_endpoint: auth
 
-# 核心建议：启用以下配置，使界面在发布后逻辑更清晰
-display_type: list # 强制列表视图为主
+# 媒体库配置（必须放在根层级，不能缩进到 backend 里）
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+# 基础配置
+display_type: list
+show_preview_links: false
 
 collections:
   - name: "blog"
     label: "文章发布"
     folder: "posts"
-    create: true # 必须为 true，确保有新建动作
+    create: true
+    # 强制文件名唯一，防止内容覆盖
     slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}{{second}}-{{slug}}"
     fields:
       - {label: "文章标题", name: "title", widget: "string"}
