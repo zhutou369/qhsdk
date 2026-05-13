@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("./posts/*.md");
   });
 
-  eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("ai1");
   eleventyConfig.addPassthroughCopy("assets");
 
   return {
