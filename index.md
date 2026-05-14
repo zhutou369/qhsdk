@@ -73,19 +73,19 @@
         </article>
     </main>
 
-    <aside class="sidebar-card">
-<h3 class="widget-title">后台动态更新</h3>
-        <div id="dynamic-posts">
-            {%- for post in collections.blog | reverse -%}
-            <a href="{{ post.url }}" class="article-item">
-                <div class="article-content-wrapper">
-                    <h2 class="article-title">{{ post.data.title }}</h2>
-                </div>
-            </a>
-            {%- endfor -%}
-        </div>
-    </aside>
-</div>
+<aside class="sidebar-card">
+    <div class="widget-title">最新动态更新</div>
+    <ul class="post-list">
+        {# 使用 reverse 确保最新的文章排在最上面 #}
+        {% for post in collections.blog | reverse %}
+        <li>
+            <a href="{{ post.url }}" class="post-item">{{ post.data.title }}</a>
+        </li>
+        {% else %}
+        <li style="color:#999;">后台暂无文章，请检查 posts 文件夹及 tags 标签。</li>
+        {% endfor %}
+    </ul>
+</aside>
 
 <footer class="footer-links">
     <strong>推荐资源：</strong>
