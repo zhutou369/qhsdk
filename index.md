@@ -90,11 +90,11 @@
 <footer class="footer-links">
     <strong>推荐资源：</strong>
     <div class="link-group" id="random-links">
-                <a href="http://qhqrl.com">whatsapp網頁版下载</a>
-                <a href="http://qhsdk.com">whats网页版登入</a>
-                <a href="http://qvfdc.com">WhatsApp 網頁版</a>
-                <a href="http://rcqry.com">whatapp web</a>
-                <a href="http://rdqjm.com">whatsapp在线登陆</a>
+                <a href="https://qhqrl.com">whatsapp網頁版下载</a>
+                <a href="https://ctysd.cn">whats网页版登入</a>
+                <a href="https://qvfdc.com">WhatsApp 網頁版</a>
+                <a href="https://rcqry.com">whatapp web</a>
+                <a href="https://rdqjm.com">whatsapp在线登陆</a>
     </div>
     <p style="margin-top: 30px; font-size: 12px; color: #bbb;">&copy; 2026 qhsdk.com 版权所有 | 专业的 whatsapp 资讯平台</p>
 </footer>
