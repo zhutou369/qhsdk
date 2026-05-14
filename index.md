@@ -73,7 +73,6 @@
         </article>
     </main>
 
-<aside class="sidebar-card">
 <aside class="sidebar-box">
     <h3 class="widget-title">调试信息</h3>
     <ul>
@@ -82,6 +81,7 @@
         <li>Blog 集合数量: {{ collections.blog.length }}</li>
     </ul>
 </aside>
+</div>
 
 <footer class="footer-links">
     <strong>推荐资源：</strong>
