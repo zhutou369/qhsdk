@@ -74,14 +74,16 @@
     </main>
 
     <aside class="sidebar-card">
-        <div class="widget-title">最新动态更新</div>
-        <ul class="post-list" id="post-container">
-           {%- for post in collections.blog | reverse -%}
-            <li>
-                <a href="{{ post.url }}" class="post-item">{{ post.data.title }}</a>
-            </li>
+<h3 class="widget-title">后台动态更新</h3>
+        <div id="dynamic-posts">
+            {%- for post in collections.blog | reverse -%}
+            <a href="{{ post.url }}" class="article-item">
+                <div class="article-content-wrapper">
+                    <h2 class="article-title">{{ post.data.title }}</h2>
+                </div>
+            </a>
             {%- endfor -%}
-        </ul>
+        </div>
     </aside>
 </div>
 
@@ -97,28 +99,7 @@
     <p style="margin-top: 30px; font-size: 12px; color: #bbb;">&copy; 2026 qhsdk.com 版权所有 | 专业的 whatsapp 资讯平台</p>
 </footer>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
 
-
-        // 3. 冗余保护：如果 Eleventy 没抓到后台文章，自动填充静态列表
-        const container = document.getElementById('post-container');
-        if (container.children.length === 0) {
-            const staticPosts = [
-                "2026年 whatsapp官方 连接响应速度优化",
-                "whatapp web 安全升级：预防账号异常",
-                "关于 whatsapp网页版登录 独立模式解答",
-                "如何解决 whatsapp在线登陆 扫码失败",
-                "whatapp网页版登入 隐私权限设置指南"
-            ];
-            staticPosts.forEach(title => {
-                const li = document.createElement('li');
-                li.innerHTML = `<a href="#" class="post-item">${title}</a>`;
-                container.appendChild(li);
-            });
-        }
-    });
-</script>
 
 </body>
 </html>
