@@ -76,7 +76,7 @@
     <aside class="sidebar-card">
         <div class="widget-title">最新动态更新</div>
         <ul class="post-list" id="post-container">
-            {%- for post in collections.blog | reverse -%}
+           {%- for post in collections.blog | reverse -%}
             <li>
                 <a href="{{ post.url }}" class="post-item">{{ post.data.title }}</a>
             </li>
