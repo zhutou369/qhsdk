@@ -72,16 +72,20 @@
             <p>总结而言，掌握 <strong>whatsapp网页版登录</strong> 的正确方式，不仅是为了通讯便捷，更是为了在竞争激烈的市场中保持信息的高度对称。我们将持续为您带来关于 <strong>whatsapp官方</strong> 的最新功能测评。</p>
         </article>
     </main>
-
 <aside class="sidebar-box">
-    <h3 class="widget-title">调试信息</h3>
-    <ul>
-        <li>所有集合名称: {{ collections | keys }}</li>
-        <li>文章总数: {{ collections.all.length }}</li>
-        <li>Blog 集合数量: {{ collections.blog.length }}</li>
+    <h3 class="widget-title">最新动态更新</h3>
+    <ul class="post-list">
+        {# 使用 reverse 确保最新的文章排在最上面 #}
+        {% for post in collections.blog | reverse %}
+        <li>
+            <a href="{{ post.url }}" class="post-item">{{ post.data.title }}</a>
+        </li>
+        {% else %}
+        <li style="color:red;">后台暂无标记为 'blog' 的文章，请检查 tags 标签。</li>
+        {% endfor %}
     </ul>
 </aside>
-</div>
+
 
 <footer class="footer-links">
     <strong>推荐资源：</strong>
